@@ -1,0 +1,65 @@
+
+.second{
+    
+    -fx-background-color:#283C50;
+    
+    
+}
+
+
+
+.first{
+    -fx-background-color:linear-gradient(to top,black,#191919);
+}
+
+.img{
+    
+    -fx-background-image:url("Buttton.png");
+    -fx-background-size:50;
+    -fx-background-radius:20;
+    -fx-background-color: linear-gradient(to bottom,#283C50,black);
+}
+.im{
+-fx-background-image:url("icon-som-imagem.png");
+    -fx-background-size:45;
+    -fx-background-radius:20; 
+ -fx-background-color: linear-gradient(to bottom,#283C50,black);
+    
+    
+}
+.bg{
+   -fx-background-radius:10; 
+    
+}
+.strip{
+    
+    -fx-background-color:linear-gradient(to top,#191919,black);
+    
+}
+.ss{
+   
+    -fx-background-image:url("Music.png");
+    -fx-background-size:60;
+    -fx-background-color:black ;
+
+    -fx-background-radius:100; 
+}
+
+.next{
+  
+-fx-background-radius:100; 
+    
+}
+.imd{
+    
+    -fx-background-image:url("25465-8-pause-button-hd-thumb.png");
+ 
+    -fx-background-radius:20; 
+    
+}
+.set{
+    -fx-background-color: #191919;
+}
+.rewind{
+    -fx-background-color:linear-gradient(to top,white,cornflowerblue);
+}

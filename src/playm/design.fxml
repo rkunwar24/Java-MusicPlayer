@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="601.0" prefWidth="763.0" styleClass="first" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="playm.DesignController">
+  <children>
+    <AnchorPane layoutX="2.0" layoutY="0.0" prefHeight="601.0" prefWidth="361.0" styleClass="set" visible="true">
+      <children>
+        <AnchorPane layoutX="0.0" layoutY="497.0" prefHeight="104.0" prefWidth="361.0" styleClass="first">
+          <children>
+            <ImageView fx:id="id" fitHeight="54.0" fitWidth="54.0" layoutX="152.0" layoutY="32.0" onMouseClicked="#pause" pickOnBounds="true" preserveRatio="true">
+              <effect>
+                <Bloom threshold="0.8800000000000004">
+                  <input>
+                    <InnerShadow choke="0.11999999999999998" height="31.479999999999997" radius="15.239999999999998" width="31.479999999999997" />
+                  </input>
+                </Bloom>
+              </effect>
+              <image>
+                <Image url="@player_pause.png" />
+              </image>
+            </ImageView>
+            <Slider id="l" fx:id="s1" disable="false" focusTraversable="true" layoutX="1.0" layoutY="0.0" minHeight="6.0" prefHeight="7.0" prefWidth="361.0" visible="true">
+              <effect>
+                <Lighting>
+                  <bumpInput>
+                    <Shadow />
+                  </bumpInput>
+                  <contentInput>
+                    <Bloom threshold="0.09259259259259259" />
+                  </contentInput>
+                  <light>
+                    <javafx.scene.effect.Light.Distant>
+                      <color>
+                        <Color blue="0.478" green="0.000" red="1.000" fx:id="x5" />
+                      </color>
+                    </javafx.scene.effect.Light.Distant>
+                  </light>
+                </Lighting>
+              </effect>
+            </Slider>
+            <ImageView fx:id="icd" fitHeight="54.0" fitWidth="54.0" layoutX="221.0" layoutY="32.0" onMouseClicked="#next" pickOnBounds="true" preserveRatio="true">
+              <effect>
+                <Bloom threshold="0.9225925925925926">
+                  <input>
+                    <InnerShadow height="4.8730158730158735" radius="1.9365079365079367" width="4.8730158730158735" />
+                  </input>
+                </Bloom>
+              </effect>
+              <image>
+                <Image url="@player_stop.png" />
+              </image>
+            </ImageView>
+            <ImageView fx:id="rewind" fitHeight="53.0" fitWidth="53.0" layoutX="90.0" layoutY="33.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+              <effect>
+                <InnerShadow height="10.840000000000003" radius="4.920000000000002" width="10.840000000000003" />
+              </effect>
+              <image>
+                <Image url="@previous.png" />
+              </image>
+            </ImageView>
+            <ImageView fx:id="ic" fitHeight="53.0" fitWidth="53.0" layoutX="153.0" layoutY="32.0" onMouseClicked="#play" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@player_play%20(1).png" />
+              </image>
+            </ImageView>
+          </children>
+          <stylesheets>
+            <URL value="@player.css" />
+          </stylesheets>
+        </AnchorPane>
+        <ImageView fx:id="im" fitHeight="327.9999694824219" fitWidth="327.9999694824219" layoutX="16.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+          <effect>
+            <InnerShadow choke="0.11904761904761904" height="57.44444444444444" radius="28.22222222222222" width="57.44444444444444">
+              <input>
+                <Bloom threshold="0.37999999999999945" />
+              </input>
+            </InnerShadow>
+          </effect>
+          <image>
+            <Image url="@unnamed-9.png" />
+          </image>
+        </ImageView>
+        <Label fx:id="tym" layoutX="275.0" layoutY="465.0" prefHeight="24.0" prefWidth="71.0" text="" />
+        <AnchorPane layoutX="1.0" layoutY="0.0" minHeight="82.0" prefHeight="82.0" prefWidth="361.0" styleClass="strip">
+          <children>
+            <Button layoutX="2.0" layoutY="2.0" mnemonicParsing="false" onAction="#volumemute" prefHeight="45.0" prefWidth="45.0" styleClass="im" text="">
+              <effect>
+                <Bloom threshold="0.8900000000000005">
+                  <input>
+                    <InnerShadow choke="0.31746031746031744" color="WHITE" height="12.936507936507937" radius="5.968253968253968" width="12.936507936507937" />
+                  </input>
+                </Bloom>
+              </effect>
+              <stylesheets>
+                <URL value="@player.css" />
+              </stylesheets>
+            </Button>
+            <Button layoutX="346.0" layoutY="7.0" minWidth="11.0" mnemonicParsing="false" onAction="#musiclisthide" prefHeight="33.0" prefWidth="11.0" styleClass="next" text="">
+              <effect>
+                <InnerShadow height="13.380000000000003" radius="6.190000000000001" width="13.380000000000003" />
+              </effect>
+              <stylesheets>
+                <URL value="@player.css" />
+              </stylesheets>
+            </Button>
+            <Slider id="l" fx:id="s2" layoutX="54.0" layoutY="15.0" prefWidth="189.0">
+              <effect>
+                <Lighting>
+                  <bumpInput>
+                    <Shadow />
+                  </bumpInput>
+                  <contentInput>
+                    <Bloom threshold="0.09259259259259259" />
+                  </contentInput>
+                  <light>
+                    <javafx.scene.effect.Light.Distant color="$x5" />
+                  </light>
+                </Lighting>
+              </effect>
+            </Slider>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="298.0" layoutY="-1.0" onMouseClicked="#musiclist" pickOnBounds="true" preserveRatio="true">
+              <effect>
+                <InnerShadow choke="0.4603174603174603" color="WHITE">
+                  <input>
+                    <Bloom />
+                  </input>
+                </InnerShadow>
+              </effect>
+              <image>
+                <Image url="@record.png" />
+              </image>
+            </ImageView>
+            <ImageView fx:id="is" disable="false" fitHeight="60.499794031892414" fitWidth="32.999887466430664" layoutX="-4.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" visible="false">
+              <image>
+                <Image url="@guitar2.gif" />
+              </image>
+            </ImageView>
+          </children>
+          <stylesheets>
+            <URL value="@player.css" />
+          </stylesheets>
+        </AnchorPane>
+        <Label fx:id="tim" layoutX="23.0" layoutY="465.0" prefHeight="24.0" prefWidth="60.0" text="" />
+        <Label fx:id="songname" layoutX="26.0" layoutY="98.0" prefHeight="32.0" prefWidth="328.0" text="" textFill="#ff66af">
+          <effect>
+            <Bloom threshold="0.6400000000000002">
+              <input>
+                <InnerShadow choke="0.08968253968253967" color="#ff007a" height="24.064126984126982" radius="11.532063492063491" width="24.064126984126982" />
+              </input>
+            </Bloom>
+          </effect>
+          <font>
+            <Font name="Comic Sans MS Bold" size="15.0" />
+          </font>
+        </Label>
+        <ImageView fx:id="isd" fitHeight="65.3333625793457" fitWidth="35.6363803042179" layoutX="7.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" visible="false">
+          <image>
+            <Image url="@guitar2.gif" />
+          </image>
+        </ImageView>
+      </children>
+      <stylesheets>
+        <URL value="@player.css" />
+      </stylesheets>
+    </AnchorPane>
+    <AnchorPane layoutX="366.0" layoutY="1.0" prefHeight="601.0" prefWidth="401.0" styleClass="second">
+      <children>
+        <ImageView fx:id="i" fitHeight="202.62613008156316" fitWidth="405.9999694824219" layoutX="-1.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true">
+          <effect>
+            <InnerShadow choke="0.7099999999999997" height="8.300000000000004" radius="3.6500000000000017" width="8.300000000000004">
+              <color>
+                <Color blue="0.800" green="0.512" red="0.000" fx:id="x1" />
+              </color>
+            </InnerShadow>
+          </effect>
+          <image>
+            <Image url="@8.jpg" />
+          </image>
+        </ImageView>
+        <ImageView fitHeight="406.0" fitWidth="406.0" layoutX="-1.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true">
+          <effect>
+            <InnerShadow choke="0.6507936507936508" color="$x1" height="8.300000000000004" radius="3.6500000000000017" width="8.300000000000004" />
+          </effect>
+          <image>
+            <Image url="@images-1.jpg" />
+          </image>
+        </ImageView>
+        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="105.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true" visible="false">
+          <image>
+            <Image url="@unnamed.gif" />
+          </image>
+        </ImageView>
+        <ImageView fx:id="mf" fitHeight="150.0" fitWidth="200.0" layoutX="126.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true" visible="false">
+          <image>
+            <Image url="@unnamed.gif" />
+          </image>
+        </ImageView>
+        <ListView fx:id="li" layoutX="0.0" layoutY="0.0" onMouseClicked="#button" prefHeight="601.0" prefWidth="404.0" />
+      </children>
+      <stylesheets>
+        <URL value="@player.css" />
+      </stylesheets>
+    </AnchorPane>
+  </children>
+  <stylesheets>
+    <URL value="@player.css" />
+  </stylesheets>
+</AnchorPane>
